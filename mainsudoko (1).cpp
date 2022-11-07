@@ -5,7 +5,7 @@
 int main(){
 	int i,j,y,z;
 	char x,k;
-
+    int count=0;
 
 	char pu[10][10];
 	pu[0][0]='0';
@@ -397,14 +397,19 @@ for(i=1;i<10;i++){
     for(j=1;j<10;j++){
         if((pu[i][j]=='a') || (pu[i][j]=='b') || (pu[i][j]=='c') ||  (pu[i][j]=='d') || (pu[i][j]=='e') || (pu[i][j]=='f') || (pu[i][j]=='g')|| (pu[i][j]=='h') || (pu[i][j]=='i')  ){
                 fflush(stdin);
-            goto hehe;
+            count++;
         }
         else{
-            goto aau;
+                count=0;
+            goto hehe;
         }
     }
 }
-aau:printf("Congratulation you won");
+if(count==81){
+                printf("You won");
+            }
+
+
 }
 
 	getch();
